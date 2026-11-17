@@ -1,0 +1,48 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "photo_2026-11-17_11-33-48.jpg, предоставлен пользователем",
+  "assets": [
+    {
+      "name": "hero",
+      "output": "assets/images/hero.webp",
+      "generated": "exec-b1c93f4f-3bad-4de0-8d30-9a37e33ee5fa.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide hero photograph for the supplied Casa Nova architectural construction website reference. Generate only the large top-right interior photograph, no website layout, no lettering. Precisely match its subject and mood: elegant A-class Moscow office reception, straight architectural perspective along a sunlit corridor, full-height black slim metal framed glass offices on the left and center receding into depth, broad rectangular warm ivory travertine reception desk in foreground right, olive tree in a square planter on desk, tall walnut wood paneled wall at right, fine linear wood slat ceiling with warm linear LED lighting, pale stone floor with long diagonal afternoon window shadows. City skyline visible through distant glazing. Warm beige, ivory, walnut and charcoal, highly realistic refined architectural editorial photography, natural materials, no people. Landscape image 3:2, desk fills right half and corridor left half, full rectangular photograph without rounded corners. No text, no logo, no watermark."
+    },
+    {
+      "name": "plaster",
+      "output": "assets/images/plaster.webp",
+      "generated": "exec-b54ebd68-576c-4fa3-ac40-e49335521aae.png",
+      "prompt": "Photorealistic-natural. Website detail photograph matching Casa Nova reference. Extreme close-up of a construction craftsman's gloved right hand smoothing gray plaster onto a concrete wall with a broad rectangular steel trowel. Forearm enters from left, glove and tool center, raw gray stone wall fills background. Natural soft side light, neutral warm gray, beautifully tactile, professional clean craftsmanship. Landscape 3:2. No text, no logos, no watermark. Single image, not a website."
+    },
+    {
+      "name": "office",
+      "output": "assets/images/office.webp",
+      "generated": "exec-937a0c6c-b37b-46f7-a108-648b4c7fdd94.png",
+      "prompt": "Photorealistic-natural. Wide editorial architectural photograph matching Casa Nova supplied reference project card: premium open-plan office with black slim framed glass partitions, warm concrete columns and ceiling, oak desks and black task chairs, a large sculptural olive tree in pale stone planter at the left foreground, wide windows facing a modern Moscow skyline at center back, warm afternoon sun, pale travertine floor, long reflections. Restrained ivory taupe walnut charcoal palette, photographic realism and impeccable perspective. Landscape 3:2, horizontal. No people, no text, no logo, no watermark."
+    },
+    {
+      "name": "detail",
+      "output": "assets/images/detail.webp",
+      "generated": "exec-bfb206dc-2d23-4e9a-999e-e0ddcf9b6e0b.png",
+      "prompt": "Photorealistic-natural. Wide close-up photograph of an elegant class A office interior finishing detail, matching the second Casa Nova project image in supplied reference. A warm ivory richly textured horizontal travertine feature wall across left two thirds, dark narrow vertical oak wooden slats right third, slim glowing warm LED strip near the ceiling diagonally receding into distance. Beautiful evening architectural lighting, refined craftsmanship, deep material realism, beige gold walnut palette. Landscape 3:2. No people no text no logo no watermark."
+    },
+    {
+      "name": "materials",
+      "output": "assets/images/materials.webp",
+      "generated": "exec-5c2ba525-f36f-4e5a-86dc-bb015a6115e6.png",
+      "prompt": "Product-mockup architectural materials still life for Casa Nova website matching supplied reference. Vertical arrangement of three large real material sample slabs resting on low travertine pedestal steps: tall raw gray concrete slab at back, rectangular warm beige porous travertine slab front left, tall rich walnut wooden slab front right, softly lit textured concrete alcove behind. Golden afternoon sun from left and soft shadows, sophisticated restrained ivory beige gray wood palette. Landscape 3:2 full photo, composition centered and easily cropped into a narrow tall arch. No graphic arch border baked in, no text, no labels, no logos, no watermarks."
+    },
+    {
+      "name": "cutaway",
+      "output": "assets/images/cutaway.webp",
+      "generated": "exec-8b554a26-6e5d-4bc2-b3c8-fc3df1994c5b.png",
+      "prompt": "Stylized-concept. Asset type architectural technical 3D cutaway render for Casa Nova construction website matching supplied reference. A physically realistic isometric corner of a premium modern office shown as a freestanding compact cutaway architectural model, three-quarter frontal view, entire object visible with generous empty margins. Left side reveals distinct layers of a thick wall from gray raw concrete, mesh reinforced plaster and ivory smooth painted finish. Center right reveals a finished warm travertine feature wall and walnut cladding. Far right black framed full height glass office doorway with a tiny olive tree visible behind. Layered stepped floor base reveals gray structural concrete, sand screed, waterproofing and polished beige travertine top surface, three shallow steps. Rounded arched upper right silhouette. High-end photorealistic materials, warm neutral light, soft realistic ground contact shadow. Object isolated on transparent background. Absolutely no text, no labels, no arrows, no graphic callouts, no logos, no watermark."
+    },
+    {
+      "name": "construction",
+      "output": "assets/images/construction.webp",
+      "generated": "exec-783140f7-c74f-438a-b767-2af611c461d0.png",
+      "prompt": "Photorealistic-natural. Wide architectural photograph of a clean commercial office construction site matching supplied Casa Nova reference team section. Spacious unfinished concrete office floor, exposed concrete columns and slab ceiling, huge industrial windows with city skyline, neatly stacked bagged construction materials and wrapped pallet in middle distance, a compact yellow and black industrial floor grinding machine in center foreground with its long black hose neatly looped, afternoon sunlight casting long diagonal window shadows over floor. Warm soft beige gray tones, premium architectural photography. Landscape 3:2, full rectangular photo. No people, no text, no labels, no logo, no watermark."
+    }
+  ]
+}

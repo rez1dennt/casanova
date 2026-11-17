@@ -1,0 +1,30 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "name": "logo-hd",
+      "file": "assets/images/logo-hd.png",
+      "prompt": "Create a clean high-resolution version of the attached Casa Nova company logo. Preserve the logo design and its layout: dark CN monogram with a small gold doorway detail, and the words Casa Nova underneath. Sharp flat artwork, smooth edges, no new elements. Transparent background. Large square image.",
+      "reference": "assets/images/logo-original.png"
+    },
+    {
+      "name": "team-about",
+      "file": "assets/images/team-about.webp",
+      "prompt": "Photorealistic-natural. Wide sophisticated architectural editorial photograph for Casa Nova construction company's about page. Two professional construction specialists in light neutral work clothes and white hard hats, small within a large sunlit commercial office under construction, viewed from behind or in three-quarter view studying a large architectural plan on a waist-height wooden worktable. Broad windows, raw concrete columns, clean organized floor, neatly placed tools in distance. No floor grinding machine, no yellow machine, no logos or lettering. Restrained warm gray ivory walnut palette, soft natural daylight, realistic professional scene, not glossy CGI. Horizontal landscape 3:2, carefully composed with the specialists near right center and generous architectural setting."
+    },
+    {
+      "name": "base-workshop",
+      "file": "assets/images/base-workshop.webp",
+      "prompt": "Photorealistic-natural. Wide premium editorial photograph of the organized equipment and materials base of a construction company, for a website block called 'Сильная команда. Собственная база.'. Clean industrial workshop/warehouse, neatly organized steel storage shelves with boxed building materials on the left, professional construction tools and machines arranged on a low platform, wooden pallets of protected material samples, large side windows admitting soft afternoon light. A clean professional construction storage environment, no people, no grinder machine, no construction office interior, no text, no brands, no logos. Warm beige, muted concrete gray and wood. Landscape 3:2. Photographic natural material detail, quiet restrained architectural composition."
+    }
+  ],
+  "telegram": {
+    "file": "assets/icons/telegram.svg",
+    "source": "https://telegram.org/tour/screenshots",
+    "download": "https://telegram.org/file/464001088/1/bI7AJLo7oX4.287931.zip/374fe3b0a59dc60005"
+  },
+  "company": {
+    "source": "Карточка предприятия Casa Nova.docx",
+    "fields": "name, INN, KPP, OGRN, legal address, email"
+  }
+}

@@ -1,0 +1,14 @@
+.playwright-mcp/
+node_modules/
+docs/*.png
+docs/*.webp
+*.zip
+*.log
+.DS_Store
+tmp/
+.openai/
+.env
+.env.*
+!.env.example
+/konstanta-site/
+.npm-cache/

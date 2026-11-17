@@ -1,0 +1,294 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 48
+    },
+    {
+      "width": 1920,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1920,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1920,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1920,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 43.1875
+    },
+    {
+      "width": 1440,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1440,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1440,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1440,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1280,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 38.390625
+    },
+    {
+      "width": 1280,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1280,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1280,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1280,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 30.71875
+    },
+    {
+      "width": 1024,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1024,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1024,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 1024,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 853,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 25.578125
+    },
+    {
+      "width": 853,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 853,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 853,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 853,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": "pass",
+      "photoGap": 24
+    },
+    {
+      "width": 768,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 768,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 768,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 768,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 760,
+      "route": "/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 760,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 760,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 760,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 760,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "route": "/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 320,
+      "route": "/about/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 320,
+      "route": "/projects/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 320,
+      "route": "/services/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 320,
+      "route": "/contacts/",
+      "status": "pass",
+      "photoGap": null
+    },
+    {
+      "width": 360,
+      "interaction": "menu/escape/focus/scroll",
+      "status": "pass"
+    },
+    {
+      "width": 320,
+      "interaction": "menu/escape/focus/scroll",
+      "status": "pass"
+    },
+    {
+      "interaction": "project links/two galleries/41 full photos/keyboard",
+      "status": "pass"
+    },
+    {
+      "interaction": "form/phone/inline fallback",
+      "status": "pass"
+    }
+  ],
+  "runtimeErrors": [],
+  "failedRequests": []
+}

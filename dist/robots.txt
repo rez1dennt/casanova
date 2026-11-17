@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://casa-nova-atelier.rez1denntbuss.chatgpt.site/sitemap.xml
