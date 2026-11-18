@@ -171,6 +171,7 @@
   .craft-arrow svg { width: 24px; height: 24px; }
   .hero-caption { font-size: .9rem; }
   .scope-section { min-height: 180px; }
+  .scope-item { padding-inline-end: var(--space-4); }
   .resources { padding-left: 20%; }
   .resources h2 { font-size: 2.5vw; }
   .team-section { padding-block: var(--space-4); }
@@ -193,6 +194,15 @@
   .hero-caption { grid-area: caption; font-size: .9rem; margin-top: calc(-1 * var(--space-3)); gap: var(--space-2); }
   .hero-caption p { flex-shrink: 1; }
   .scope-section { margin-top: var(--space-3); margin-bottom: var(--space-5); }
+  .scope-arc { top: var(--space-1); height: var(--space-6); transform: none; }
+  .scope-item { display: flex; flex-direction: column; justify-content: space-between; align-self: stretch; gap: var(--space-2); }
+  .scope-turnkey h2 { font-size: clamp(1.15rem, 4.9vw, 1.8rem); line-height: 1.1; }
+  .scope-separate h2 { font-size: clamp(1.0625rem, 4.45vw, 1.65rem); line-height: 1.1; }
+  .service-overview { gap: var(--space-4); }
+  .service-overview-image { margin-block: 0; }
+  .service-thresholds > div { display: flex; flex-direction: column; gap: var(--space-2); }
+  .service-thresholds > div > span { min-height: 0; font-size: clamp(1.2rem, 5vw, 1.55rem); line-height: 1.1; }
+  .service-thresholds p { margin-top: auto; }
   .home-projects { grid-template-columns: 1fr; gap: var(--space-6); }
   .home-projects .project-picture, .home-projects .project-card:last-child .project-picture { height: auto; aspect-ratio: 1.6; }
   .project-card figcaption { font-size: .9rem; padding-top: var(--space-3); }
