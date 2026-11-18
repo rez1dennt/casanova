@@ -6,7 +6,12 @@
   --intro-wait: 400ms;
   --intro-exit: 240ms;
   --intro-line: 320ms;
+  --menu-open: 260ms;
+  --menu-close: 180ms;
 }
+
+.mobile-menu { transition: opacity var(--menu-open) var(--ease), clip-path var(--menu-open) var(--ease); }
+.mobile-menu.is-closing { transition-duration: var(--menu-close); }
 
 .site-header,
 .site-header.menu-active { background: transparent; backdrop-filter: none; pointer-events: none; }
@@ -157,10 +162,14 @@
   .header-phone, .header-cta { display: none; }
   .header-call { display: grid; }
   .icon-contact, .menu-toggle { width: 40px; height: 40px; }
-  .menu-toggle { background: var(--color-surface); }
+  .menu-toggle { background: var(--color-surface); gap: 5px; }
+  .menu-toggle span { transition: transform var(--transition-fast) var(--ease), opacity var(--transition-fast); }
+  .menu-toggle[aria-expanded=true] span:first-child { transform: translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded=true] span:nth-child(2) { transform: scaleX(.3); opacity: 0; }
+  .menu-toggle[aria-expanded=true] span:last-child { transform: translateY(-6px) rotate(-45deg); }
   .header-telegram { background: transparent; }
   .telegram-icon { width: 24px; height: 24px; }
-  .menu-dialog-header { inset: 12px 5% auto; height: 72px; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 20px; background: var(--color-surface); }
+  .menu-dialog-header { position: fixed; z-index: 1; inset: 12px 5% auto; height: 72px; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 20px; background: var(--color-surface); }
   .menu-dialog-header .logo img { width: 68px; height: 54px; }
   .mobile-menu { padding-top: calc(var(--header-height) + 28px); }
   .menu-bottom .telegram-link { font-size: .85rem; }

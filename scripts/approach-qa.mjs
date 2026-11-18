@@ -81,5 +81,52 @@ export async function approachQA(page, base = 'http://localhost:4189') {
   await page.locator('.approach-teaser').click();
   await page.waitForURL('**/about/#approach');
   check(await page.locator('#approach').count() === 1, 'Homepage teaser has a real destination');
-  return { viewports: results, reducedMotion: true, slowPhoto: true, homepageLink: true };
+  const homeBand = await teamBandQA(page, base);
+  return { viewports: results, reducedMotion: true, slowPhoto: true, homepageLink: true, homeBand };
+}
+
+async function teamBandQA(page, base = 'http://localhost:4189') {
+  const check = (condition, message) => { if (!condition) throw new Error(message); };
+  const results = [];
+  await page.goto(`${base}/?team-band-qa=1`);
+  await page.waitForFunction(() => !document.documentElement.classList.contains('intro-pending'));
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    const image = document.querySelector('.team-image img');
+    image.loading = 'eager';
+    await image.decode();
+  });
+  for (const width of [1440, 1024, 768, 760, 600, 414, 390, 360, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    const geometry = await page.locator('.team-section').evaluate(section => {
+      const copy = section.querySelector('.team-copy').getBoundingClientRect();
+      const teaser = section.querySelector('.approach-teaser').getBoundingClientRect();
+      const photo = section.querySelector('.team-image').getBoundingClientRect();
+      const index = section.querySelector('.approach-teaser-index');
+      const label = section.querySelector('.approach-teaser > span:nth-child(2)');
+      const range = document.createRange();
+      range.selectNodeContents(label);
+      const labelLines = [...new Set([...range.getClientRects()].filter(rect => rect.width).map(rect => Math.round(rect.y)))].length;
+      const numberRange = document.createRange();
+      numberRange.selectNodeContents(index);
+      const numbersFit = [...numberRange.getClientRects()].every(rect => rect.left >= teaser.left && rect.right <= teaser.right);
+      return { fullWidth: Math.abs(teaser.width - copy.width) < 1, belowCopy: teaser.top >= copy.bottom + 12,
+        abovePhoto: teaser.bottom + 12 <= photo.top, numberLines: index.querySelector('i').getClientRects().length,
+        numbersFit, labelLines, height: teaser.height, teaserWidth: teaser.width,
+        imageFilled: Math.abs(section.querySelector('.team-image img').getBoundingClientRect().height - photo.height) < 1,
+        overflowing: document.documentElement.scrollWidth > innerWidth };
+    });
+    check(!geometry.overflowing && geometry.imageFilled, `${width}: no overflow or empty photo frame`);
+    check(geometry.numberLines === 1 && geometry.numbersFit, `${width}: 01—04 stays on one line inside the card`);
+    if (width <= 760) {
+      check(geometry.fullWidth && geometry.belowCopy && geometry.abovePhoto, `${width}: teaser has its own full-width row between copy and photo`);
+      check(geometry.labelLines <= 2 && geometry.height <= 100, `${width}: readable compact horizontal teaser`);
+    }
+    if ([1440, 390, 320].includes(width)) await page.locator('.team-section').screenshot({ path: `C:/Users/bahti/Documents/Casa Nova сайт/docs/team-band-${width}.png` });
+    results.push({ width, ...geometry });
+  }
+  await page.locator('.approach-teaser').click();
+  await page.waitForURL('**/about/#approach');
+  check(await page.locator('#approach').count() === 1, 'Teaser reaches the process section');
+  return { viewports: results, link: true };
 }

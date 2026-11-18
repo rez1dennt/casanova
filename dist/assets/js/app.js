@@ -10,7 +10,8 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const mobileMenu = $('#mobile-menu');
 const menuToggle = $('.menu-toggle');
 let savedScroll = 0;
-let closing = false;
+let closing = null;
+let menuFrame = 0;
 
 function openMenu() {
   if (mobileMenu.open || closing) return;
@@ -20,25 +21,34 @@ function openMenu() {
   menuToggle.setAttribute('aria-expanded', 'true');
   menuToggle.setAttribute('aria-label', 'Закрыть меню');
   $('.site-header').classList.add('menu-active');
-  requestAnimationFrame(() => requestAnimationFrame(() => mobileMenu.classList.add('is-open')));
+  // Flush the closed frame before starting the opening transition.
+  getComputedStyle(mobileMenu).opacity;
+  menuFrame = requestAnimationFrame(() => mobileMenu.classList.add('is-open'));
 }
-async function closeMenu() {
-  if (!mobileMenu.open || closing) return;
-  closing = true;
+function closeMenu() {
+  if (closing) return closing;
+  if (!mobileMenu.open) return Promise.resolve();
+  cancelAnimationFrame(menuFrame);
+  mobileMenu.classList.add('is-closing');
   mobileMenu.classList.remove('is-open');
-  await new Promise(resolve => setTimeout(resolve, reducedMotion.matches ? 0 : 650));
-  mobileMenu.close();
-  for (const property of ['position', 'top', 'left', 'right']) document.body.style[property] = '';
-  window.scrollTo({ top: savedScroll, behavior: 'instant' });
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.setAttribute('aria-label', 'Открыть меню');
-  $('.site-header').classList.remove('menu-active');
-  menuToggle.focus({ preventScroll: true });
-  closing = false;
+  // Await the actual transitions; there is no extra timer blocking the page.
+  const animations = reducedMotion.matches ? [] : mobileMenu.getAnimations();
+  closing = Promise.all(animations.map(animation => animation.finished.catch(() => {}))).then(() => {
+    mobileMenu.close();
+    mobileMenu.classList.remove('is-closing');
+    for (const property of ['position', 'top', 'left', 'right']) document.body.style[property] = '';
+    window.scrollTo({ top: savedScroll, behavior: 'instant' });
+    $('.site-header').classList.remove('menu-active');
+    menuToggle.focus({ preventScroll: true });
+    closing = null;
+  });
+  return closing;
 }
 const menuHeader = document.createElement('div');
 menuHeader.className = 'menu-dialog-header';
-menuHeader.innerHTML = `${$('.logo').outerHTML}<button class="menu-toggle menu-close" aria-label="Закрыть меню" aria-expanded="true"><span></span><span></span></button>`;
+menuHeader.innerHTML = `${$('.logo').outerHTML}<button class="menu-toggle menu-close" aria-label="Закрыть меню" aria-expanded="true"><span></span><span></span><span></span></button>`;
 mobileMenu.prepend(menuHeader);
 $('.menu-close', mobileMenu).addEventListener('click', closeMenu);
 menuToggle.addEventListener('click', openMenu);

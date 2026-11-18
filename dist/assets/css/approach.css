@@ -45,9 +45,9 @@
 
 /* The homepage teaser replaces the sample letter and leads to the real section. */
 .approach-teaser { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; align-self: stretch; gap: var(--space-4); padding: var(--space-5); border: 1px solid #b5976159; border-radius: 1.25rem; background: #fffaf359; min-width: 0; }
-.approach-teaser-index { font: 400 clamp(2.8rem, 4vw, 4rem)/.8 var(--font-display); letter-spacing: -.06em; }
+.approach-teaser-index { font: 400 clamp(2.8rem, 4vw, 4rem)/.8 var(--font-display); letter-spacing: -.06em; white-space: nowrap; }
 .approach-teaser-index i { font-style: italic; font-size: .7em; color: var(--color-link); }
-.approach-teaser > span:nth-child(2) { font-size: var(--text-small); line-height: 1.4; }
+.approach-teaser > span:nth-child(2) { font-size: var(--text-small); line-height: 1.4; max-width: 14ch; }
 .approach-teaser .circle-arrow { width: 32px; height: 32px; transition: background var(--transition-base), color var(--transition-base), transform var(--transition-base) var(--ease); }
 .approach-teaser:hover .circle-arrow { background: var(--color-action); color: var(--color-on-action); transform: rotate(-35deg); }
 
@@ -86,10 +86,15 @@
   .approach-tags { gap: 6px; margin-bottom: var(--space-4); }
   .approach-tags span { font-size: .56rem; }
   .approach-footnote { padding-inline: 0; font-size: .55rem; line-height: 1.5; }
-  .approach-teaser { grid-column: 2; grid-row: 1; padding: var(--space-4); gap: var(--space-3); border-radius: 1rem; }
-  .approach-teaser-index { font-size: 2.5rem; }
-  .approach-teaser > span:nth-child(2) { font-size: .62rem; }
-  .approach-teaser .circle-arrow { width: 28px; height: 28px; }
+  .team-section { grid-template-columns: minmax(0, 1fr); gap: var(--space-5); }
+  .team-copy h2 { font-size: clamp(1.85rem, 6vw, 2.8rem); line-height: .98; }
+  .team-copy p { font-size: .78rem; line-height: 1.4; max-width: 38ch; }
+  .team-copy p br, .approach-teaser > span:nth-child(2) br { display: none; }
+  .team-image { grid-column: 1; grid-row: 3; }
+  .approach-teaser { display: grid; grid-template-columns: auto minmax(0, 1fr) 32px; align-items: center; grid-column: 1; grid-row: 2; padding: var(--space-4); gap: var(--space-3); border-radius: 1rem; }
+  .approach-teaser-index { font-size: 2.1rem; }
+  .approach-teaser > span:nth-child(2) { font-size: .8125rem; max-width: none; min-width: 0; }
+  .approach-teaser .circle-arrow { width: 32px; height: 32px; justify-self: end; }
 }
 @media (max-width: 360px) {
   .approach-tab { padding: 10px 8px; gap: var(--space-2); }
@@ -97,8 +102,7 @@
   .approach-stage { min-height: 430px; }
   .approach-caption, .approach-image-top { inset-inline: var(--space-4); }
   .approach-caption h3 { font-size: 2rem; }
-  .approach-teaser { padding: var(--space-3); }
-  .approach-teaser-index { font-size: 2.15rem; }
+  .approach-teaser-index { font-size: 2rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .approach-section *, .approach-teaser * { transition: none !important; }
